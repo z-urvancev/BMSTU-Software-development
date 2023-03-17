@@ -1,0 +1,67 @@
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /Users/zurvantsev/AndroidStudioProjects/project1/libs/spdlog/build/x86_64/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_52da1/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_52da1.dir/build.make CMakeFiles/cmTC_52da1.dir/build
+Building CXX object CMakeFiles/cmTC_52da1.dir/src.cxx.o
+/Users/zurvantsev/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=x86_64-none-linux-android21 --sysroot=/Users/zurvantsev/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -DCMAKE_HAVE_LIBC_PTHREAD  -DSPDLOG_COMPILED_LIB  -O2 -g -DNDEBUG -fPIE -std=c++11 -MD -MT CMakeFiles/cmTC_52da1.dir/src.cxx.o -MF CMakeFiles/cmTC_52da1.dir/src.cxx.o.d -o CMakeFiles/cmTC_52da1.dir/src.cxx.o -c /Users/zurvantsev/AndroidStudioProjects/project1/libs/spdlog/build/x86_64/CMakeFiles/CMakeTmp/src.cxx
+/Users/zurvantsev/AndroidStudioProjects/project1/libs/spdlog/build/x86_64/CMakeFiles/CMakeTmp/src.cxx:13:3: error: use of undeclared identifier 'pthread_cancel'
+  pthread_cancel(thread);
+  ^
+1 error generated.
+make[1]: *** [CMakeFiles/cmTC_52da1.dir/src.cxx.o] Error 1
+make: *** [cmTC_52da1/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /Users/zurvantsev/AndroidStudioProjects/project1/libs/spdlog/build/x86_64/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_cd57a/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_cd57a.dir/build.make CMakeFiles/cmTC_cd57a.dir/build
+Building CXX object CMakeFiles/cmTC_cd57a.dir/CheckFunctionExists.cxx.o
+/Users/zurvantsev/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=x86_64-none-linux-android21 --sysroot=/Users/zurvantsev/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/sysroot   -DSPDLOG_COMPILED_LIB -DCHECK_FUNCTION_EXISTS=pthread_create -O2 -g -DNDEBUG -fPIE -std=c++11 -MD -MT CMakeFiles/cmTC_cd57a.dir/CheckFunctionExists.cxx.o -MF CMakeFiles/cmTC_cd57a.dir/CheckFunctionExists.cxx.o.d -o CMakeFiles/cmTC_cd57a.dir/CheckFunctionExists.cxx.o -c /Users/zurvantsev/AndroidStudioProjects/project1/libs/spdlog/build/x86_64/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_cd57a
+/Users/zurvantsev/Library/Android/sdk/cmake/3.22.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cd57a.dir/link.txt --verbose=1
+/Users/zurvantsev/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=x86_64-none-linux-android21 --sysroot=/Users/zurvantsev/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -DSPDLOG_COMPILED_LIB -DCHECK_FUNCTION_EXISTS=pthread_create -O2 -g -DNDEBUG -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Qunused-arguments -Wl,--no-undefined  -Wl,--gc-sections  CMakeFiles/cmTC_cd57a.dir/CheckFunctionExists.cxx.o -o cmTC_cd57a  -lpthreads  -static-libstdc++ -latomic -lm 
+ld: error: unable to find library -lpthreads
+clang-12: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_cd57a] Error 1
+make: *** [cmTC_cd57a/fast] Error 2
+
+
+
+Determining if the function pthread_create exists in the pthread failed with the following output:
+Change Dir: /Users/zurvantsev/AndroidStudioProjects/project1/libs/spdlog/build/x86_64/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_491bc/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_491bc.dir/build.make CMakeFiles/cmTC_491bc.dir/build
+Building CXX object CMakeFiles/cmTC_491bc.dir/CheckFunctionExists.cxx.o
+/Users/zurvantsev/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=x86_64-none-linux-android21 --sysroot=/Users/zurvantsev/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/sysroot   -DSPDLOG_COMPILED_LIB -DCHECK_FUNCTION_EXISTS=pthread_create -O2 -g -DNDEBUG -fPIE -std=c++11 -MD -MT CMakeFiles/cmTC_491bc.dir/CheckFunctionExists.cxx.o -MF CMakeFiles/cmTC_491bc.dir/CheckFunctionExists.cxx.o.d -o CMakeFiles/cmTC_491bc.dir/CheckFunctionExists.cxx.o -c /Users/zurvantsev/AndroidStudioProjects/project1/libs/spdlog/build/x86_64/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_491bc
+/Users/zurvantsev/Library/Android/sdk/cmake/3.22.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_491bc.dir/link.txt --verbose=1
+/Users/zurvantsev/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=x86_64-none-linux-android21 --sysroot=/Users/zurvantsev/Library/Android/sdk/ndk/23.1.7779620/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -DSPDLOG_COMPILED_LIB -DCHECK_FUNCTION_EXISTS=pthread_create -O2 -g -DNDEBUG -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Qunused-arguments -Wl,--no-undefined  -Wl,--gc-sections  CMakeFiles/cmTC_491bc.dir/CheckFunctionExists.cxx.o -o cmTC_491bc  -lpthread  -static-libstdc++ -latomic -lm 
+ld: error: unable to find library -lpthread
+clang-12: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [cmTC_491bc] Error 1
+make: *** [cmTC_491bc/fast] Error 2
+
+
+
