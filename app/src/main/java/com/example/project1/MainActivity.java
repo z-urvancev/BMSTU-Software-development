@@ -17,7 +17,7 @@ import com.example.project1.databinding.ActivityMainBinding;
 import org.apache.commons.codec.DecoderException;
 import org.apache.commons.codec.binary.Hex;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements TransactionEvents{
     public native String stringFromJNI();
     public static native int initRng();
     public static native byte[] randomBytes(int no);
@@ -66,6 +66,25 @@ public class MainActivity extends AppCompatActivity {
 
     public static native byte[] encrypt(byte[] key, byte[] data);
     public static native byte[] decrypt(byte[] key, byte[] data);
+
+    private String pin;
+
+    @Override
+    public String enterPin(int ptc, String amount) {
+        pin = new String();
+        Intent it = new Intent(MainActivity.this, PinpadActivity.class);
+        it.putExtra("ptc", ptc);
+        it.putExtra("amount", amount);
+        synchronized (MainActivity.this) {
+            activityResultLauncher.launch(it);
+            try {
+                MainActivity.this.wait();
+            } catch (Exception ex) {
+                //todo: log error
+            }
+        }
+        return pin;
+    }
 
     public static byte[] stringToHex(String s)
     {
