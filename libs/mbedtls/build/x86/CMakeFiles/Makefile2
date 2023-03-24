@@ -576,8 +576,8 @@ library/CMakeFiles/mbedx509_static.dir/clean:
 # Target rules for target library/CMakeFiles/mbedtls_static.dir
 
 # All Build rule for target.
-library/CMakeFiles/mbedtls_static.dir/all: library/CMakeFiles/mbedx509_static.dir/all
 library/CMakeFiles/mbedtls_static.dir/all: library/CMakeFiles/mbedcrypto_static.dir/all
+library/CMakeFiles/mbedtls_static.dir/all: library/CMakeFiles/mbedx509_static.dir/all
 	$(MAKE) $(MAKESILENT) -f library/CMakeFiles/mbedtls_static.dir/build.make library/CMakeFiles/mbedtls_static.dir/depend
 	$(MAKE) $(MAKESILENT) -f library/CMakeFiles/mbedtls_static.dir/build.make library/CMakeFiles/mbedtls_static.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=69,70,71,72,73 "Built target mbedtls_static"
@@ -682,12 +682,12 @@ library/CMakeFiles/mbedtls.dir/clean:
 # Target rules for target library/CMakeFiles/lib.dir
 
 # All Build rule for target.
+library/CMakeFiles/lib.dir/all: library/CMakeFiles/mbedcrypto_static.dir/all
 library/CMakeFiles/lib.dir/all: library/CMakeFiles/mbedx509_static.dir/all
 library/CMakeFiles/lib.dir/all: library/CMakeFiles/mbedtls_static.dir/all
 library/CMakeFiles/lib.dir/all: library/CMakeFiles/mbedcrypto.dir/all
 library/CMakeFiles/lib.dir/all: library/CMakeFiles/mbedx509.dir/all
 library/CMakeFiles/lib.dir/all: library/CMakeFiles/mbedtls.dir/all
-library/CMakeFiles/lib.dir/all: library/CMakeFiles/mbedcrypto_static.dir/all
 	$(MAKE) $(MAKESILENT) -f library/CMakeFiles/lib.dir/build.make library/CMakeFiles/lib.dir/depend
 	$(MAKE) $(MAKESILENT) -f library/CMakeFiles/lib.dir/build.make library/CMakeFiles/lib.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num= "Built target lib"
@@ -713,8 +713,8 @@ library/CMakeFiles/lib.dir/clean:
 # Target rules for target programs/aes/CMakeFiles/crypt_and_hash.dir
 
 # All Build rule for target.
-programs/aes/CMakeFiles/crypt_and_hash.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/aes/CMakeFiles/crypt_and_hash.dir/all: library/CMakeFiles/mbedcrypto.dir/all
+programs/aes/CMakeFiles/crypt_and_hash.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/aes/CMakeFiles/crypt_and_hash.dir/build.make programs/aes/CMakeFiles/crypt_and_hash.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/aes/CMakeFiles/crypt_and_hash.dir/build.make programs/aes/CMakeFiles/crypt_and_hash.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=4 "Built target crypt_and_hash"
@@ -740,8 +740,8 @@ programs/aes/CMakeFiles/crypt_and_hash.dir/clean:
 # Target rules for target programs/cipher/CMakeFiles/cipher_aead_demo.dir
 
 # All Build rule for target.
-programs/cipher/CMakeFiles/cipher_aead_demo.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/cipher/CMakeFiles/cipher_aead_demo.dir/all: library/CMakeFiles/mbedcrypto.dir/all
+programs/cipher/CMakeFiles/cipher_aead_demo.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/cipher/CMakeFiles/cipher_aead_demo.dir/build.make programs/cipher/CMakeFiles/cipher_aead_demo.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/cipher/CMakeFiles/cipher_aead_demo.dir/build.make programs/cipher/CMakeFiles/cipher_aead_demo.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=3 "Built target cipher_aead_demo"
@@ -767,10 +767,10 @@ programs/cipher/CMakeFiles/cipher_aead_demo.dir/clean:
 # Target rules for target programs/fuzz/CMakeFiles/fuzz_pubkey.dir
 
 # All Build rule for target.
-programs/fuzz/CMakeFiles/fuzz_pubkey.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/fuzz/CMakeFiles/fuzz_pubkey.dir/all: library/CMakeFiles/mbedcrypto.dir/all
 programs/fuzz/CMakeFiles/fuzz_pubkey.dir/all: library/CMakeFiles/mbedx509.dir/all
 programs/fuzz/CMakeFiles/fuzz_pubkey.dir/all: library/CMakeFiles/mbedtls.dir/all
+programs/fuzz/CMakeFiles/fuzz_pubkey.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/fuzz/CMakeFiles/fuzz_pubkey.dir/build.make programs/fuzz/CMakeFiles/fuzz_pubkey.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/fuzz/CMakeFiles/fuzz_pubkey.dir/build.make programs/fuzz/CMakeFiles/fuzz_pubkey.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=14 "Built target fuzz_pubkey"
@@ -796,10 +796,10 @@ programs/fuzz/CMakeFiles/fuzz_pubkey.dir/clean:
 # Target rules for target programs/fuzz/CMakeFiles/fuzz_x509crl.dir
 
 # All Build rule for target.
-programs/fuzz/CMakeFiles/fuzz_x509crl.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/fuzz/CMakeFiles/fuzz_x509crl.dir/all: library/CMakeFiles/mbedcrypto.dir/all
 programs/fuzz/CMakeFiles/fuzz_x509crl.dir/all: library/CMakeFiles/mbedx509.dir/all
 programs/fuzz/CMakeFiles/fuzz_x509crl.dir/all: library/CMakeFiles/mbedtls.dir/all
+programs/fuzz/CMakeFiles/fuzz_x509crl.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/fuzz/CMakeFiles/fuzz_x509crl.dir/build.make programs/fuzz/CMakeFiles/fuzz_x509crl.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/fuzz/CMakeFiles/fuzz_x509crl.dir/build.make programs/fuzz/CMakeFiles/fuzz_x509crl.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num= "Built target fuzz_x509crl"
@@ -825,10 +825,10 @@ programs/fuzz/CMakeFiles/fuzz_x509crl.dir/clean:
 # Target rules for target programs/fuzz/CMakeFiles/fuzz_x509crt.dir
 
 # All Build rule for target.
-programs/fuzz/CMakeFiles/fuzz_x509crt.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/fuzz/CMakeFiles/fuzz_x509crt.dir/all: library/CMakeFiles/mbedcrypto.dir/all
 programs/fuzz/CMakeFiles/fuzz_x509crt.dir/all: library/CMakeFiles/mbedx509.dir/all
 programs/fuzz/CMakeFiles/fuzz_x509crt.dir/all: library/CMakeFiles/mbedtls.dir/all
+programs/fuzz/CMakeFiles/fuzz_x509crt.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/fuzz/CMakeFiles/fuzz_x509crt.dir/build.make programs/fuzz/CMakeFiles/fuzz_x509crt.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/fuzz/CMakeFiles/fuzz_x509crt.dir/build.make programs/fuzz/CMakeFiles/fuzz_x509crt.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=16 "Built target fuzz_x509crt"
@@ -854,10 +854,10 @@ programs/fuzz/CMakeFiles/fuzz_x509crt.dir/clean:
 # Target rules for target programs/fuzz/CMakeFiles/fuzz_x509csr.dir
 
 # All Build rule for target.
-programs/fuzz/CMakeFiles/fuzz_x509csr.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/fuzz/CMakeFiles/fuzz_x509csr.dir/all: library/CMakeFiles/mbedcrypto.dir/all
 programs/fuzz/CMakeFiles/fuzz_x509csr.dir/all: library/CMakeFiles/mbedx509.dir/all
 programs/fuzz/CMakeFiles/fuzz_x509csr.dir/all: library/CMakeFiles/mbedtls.dir/all
+programs/fuzz/CMakeFiles/fuzz_x509csr.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/fuzz/CMakeFiles/fuzz_x509csr.dir/build.make programs/fuzz/CMakeFiles/fuzz_x509csr.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/fuzz/CMakeFiles/fuzz_x509csr.dir/build.make programs/fuzz/CMakeFiles/fuzz_x509csr.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=17 "Built target fuzz_x509csr"
@@ -883,10 +883,10 @@ programs/fuzz/CMakeFiles/fuzz_x509csr.dir/clean:
 # Target rules for target programs/fuzz/CMakeFiles/fuzz_pkcs7.dir
 
 # All Build rule for target.
-programs/fuzz/CMakeFiles/fuzz_pkcs7.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/fuzz/CMakeFiles/fuzz_pkcs7.dir/all: library/CMakeFiles/mbedcrypto.dir/all
 programs/fuzz/CMakeFiles/fuzz_pkcs7.dir/all: library/CMakeFiles/mbedx509.dir/all
 programs/fuzz/CMakeFiles/fuzz_pkcs7.dir/all: library/CMakeFiles/mbedtls.dir/all
+programs/fuzz/CMakeFiles/fuzz_pkcs7.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/fuzz/CMakeFiles/fuzz_pkcs7.dir/build.make programs/fuzz/CMakeFiles/fuzz_pkcs7.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/fuzz/CMakeFiles/fuzz_pkcs7.dir/build.make programs/fuzz/CMakeFiles/fuzz_pkcs7.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=12 "Built target fuzz_pkcs7"
@@ -912,10 +912,10 @@ programs/fuzz/CMakeFiles/fuzz_pkcs7.dir/clean:
 # Target rules for target programs/fuzz/CMakeFiles/fuzz_privkey.dir
 
 # All Build rule for target.
-programs/fuzz/CMakeFiles/fuzz_privkey.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/fuzz/CMakeFiles/fuzz_privkey.dir/all: library/CMakeFiles/mbedcrypto.dir/all
 programs/fuzz/CMakeFiles/fuzz_privkey.dir/all: library/CMakeFiles/mbedx509.dir/all
 programs/fuzz/CMakeFiles/fuzz_privkey.dir/all: library/CMakeFiles/mbedtls.dir/all
+programs/fuzz/CMakeFiles/fuzz_privkey.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/fuzz/CMakeFiles/fuzz_privkey.dir/build.make programs/fuzz/CMakeFiles/fuzz_privkey.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/fuzz/CMakeFiles/fuzz_privkey.dir/build.make programs/fuzz/CMakeFiles/fuzz_privkey.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=13 "Built target fuzz_privkey"
@@ -941,10 +941,10 @@ programs/fuzz/CMakeFiles/fuzz_privkey.dir/clean:
 # Target rules for target programs/fuzz/CMakeFiles/fuzz_client.dir
 
 # All Build rule for target.
-programs/fuzz/CMakeFiles/fuzz_client.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/fuzz/CMakeFiles/fuzz_client.dir/all: library/CMakeFiles/mbedcrypto.dir/all
 programs/fuzz/CMakeFiles/fuzz_client.dir/all: library/CMakeFiles/mbedx509.dir/all
 programs/fuzz/CMakeFiles/fuzz_client.dir/all: library/CMakeFiles/mbedtls.dir/all
+programs/fuzz/CMakeFiles/fuzz_client.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/fuzz/CMakeFiles/fuzz_client.dir/build.make programs/fuzz/CMakeFiles/fuzz_client.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/fuzz/CMakeFiles/fuzz_client.dir/build.make programs/fuzz/CMakeFiles/fuzz_client.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=9 "Built target fuzz_client"
@@ -970,10 +970,10 @@ programs/fuzz/CMakeFiles/fuzz_client.dir/clean:
 # Target rules for target programs/fuzz/CMakeFiles/fuzz_dtlsclient.dir
 
 # All Build rule for target.
-programs/fuzz/CMakeFiles/fuzz_dtlsclient.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/fuzz/CMakeFiles/fuzz_dtlsclient.dir/all: library/CMakeFiles/mbedcrypto.dir/all
 programs/fuzz/CMakeFiles/fuzz_dtlsclient.dir/all: library/CMakeFiles/mbedx509.dir/all
 programs/fuzz/CMakeFiles/fuzz_dtlsclient.dir/all: library/CMakeFiles/mbedtls.dir/all
+programs/fuzz/CMakeFiles/fuzz_dtlsclient.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/fuzz/CMakeFiles/fuzz_dtlsclient.dir/build.make programs/fuzz/CMakeFiles/fuzz_dtlsclient.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/fuzz/CMakeFiles/fuzz_dtlsclient.dir/build.make programs/fuzz/CMakeFiles/fuzz_dtlsclient.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=10 "Built target fuzz_dtlsclient"
@@ -999,10 +999,10 @@ programs/fuzz/CMakeFiles/fuzz_dtlsclient.dir/clean:
 # Target rules for target programs/fuzz/CMakeFiles/fuzz_dtlsserver.dir
 
 # All Build rule for target.
-programs/fuzz/CMakeFiles/fuzz_dtlsserver.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/fuzz/CMakeFiles/fuzz_dtlsserver.dir/all: library/CMakeFiles/mbedcrypto.dir/all
 programs/fuzz/CMakeFiles/fuzz_dtlsserver.dir/all: library/CMakeFiles/mbedx509.dir/all
 programs/fuzz/CMakeFiles/fuzz_dtlsserver.dir/all: library/CMakeFiles/mbedtls.dir/all
+programs/fuzz/CMakeFiles/fuzz_dtlsserver.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/fuzz/CMakeFiles/fuzz_dtlsserver.dir/build.make programs/fuzz/CMakeFiles/fuzz_dtlsserver.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/fuzz/CMakeFiles/fuzz_dtlsserver.dir/build.make programs/fuzz/CMakeFiles/fuzz_dtlsserver.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=11 "Built target fuzz_dtlsserver"
@@ -1028,10 +1028,10 @@ programs/fuzz/CMakeFiles/fuzz_dtlsserver.dir/clean:
 # Target rules for target programs/fuzz/CMakeFiles/fuzz_server.dir
 
 # All Build rule for target.
-programs/fuzz/CMakeFiles/fuzz_server.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/fuzz/CMakeFiles/fuzz_server.dir/all: library/CMakeFiles/mbedcrypto.dir/all
 programs/fuzz/CMakeFiles/fuzz_server.dir/all: library/CMakeFiles/mbedx509.dir/all
 programs/fuzz/CMakeFiles/fuzz_server.dir/all: library/CMakeFiles/mbedtls.dir/all
+programs/fuzz/CMakeFiles/fuzz_server.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/fuzz/CMakeFiles/fuzz_server.dir/build.make programs/fuzz/CMakeFiles/fuzz_server.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/fuzz/CMakeFiles/fuzz_server.dir/build.make programs/fuzz/CMakeFiles/fuzz_server.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=15 "Built target fuzz_server"
@@ -1057,8 +1057,8 @@ programs/fuzz/CMakeFiles/fuzz_server.dir/clean:
 # Target rules for target programs/hash/CMakeFiles/generic_sum.dir
 
 # All Build rule for target.
-programs/hash/CMakeFiles/generic_sum.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/hash/CMakeFiles/generic_sum.dir/all: library/CMakeFiles/mbedcrypto.dir/all
+programs/hash/CMakeFiles/generic_sum.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/hash/CMakeFiles/generic_sum.dir/build.make programs/hash/CMakeFiles/generic_sum.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/hash/CMakeFiles/generic_sum.dir/build.make programs/hash/CMakeFiles/generic_sum.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=20 "Built target generic_sum"
@@ -1084,8 +1084,8 @@ programs/hash/CMakeFiles/generic_sum.dir/clean:
 # Target rules for target programs/hash/CMakeFiles/hello.dir
 
 # All Build rule for target.
-programs/hash/CMakeFiles/hello.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/hash/CMakeFiles/hello.dir/all: library/CMakeFiles/mbedcrypto.dir/all
+programs/hash/CMakeFiles/hello.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/hash/CMakeFiles/hello.dir/build.make programs/hash/CMakeFiles/hello.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/hash/CMakeFiles/hello.dir/build.make programs/hash/CMakeFiles/hello.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num= "Built target hello"
@@ -1111,8 +1111,8 @@ programs/hash/CMakeFiles/hello.dir/clean:
 # Target rules for target programs/hash/CMakeFiles/md_hmac_demo.dir
 
 # All Build rule for target.
-programs/hash/CMakeFiles/md_hmac_demo.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/hash/CMakeFiles/md_hmac_demo.dir/all: library/CMakeFiles/mbedcrypto.dir/all
+programs/hash/CMakeFiles/md_hmac_demo.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/hash/CMakeFiles/md_hmac_demo.dir/build.make programs/hash/CMakeFiles/md_hmac_demo.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/hash/CMakeFiles/md_hmac_demo.dir/build.make programs/hash/CMakeFiles/md_hmac_demo.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=83 "Built target md_hmac_demo"
@@ -1138,10 +1138,10 @@ programs/hash/CMakeFiles/md_hmac_demo.dir/clean:
 # Target rules for target programs/pkey/CMakeFiles/dh_client.dir
 
 # All Build rule for target.
-programs/pkey/CMakeFiles/dh_client.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/pkey/CMakeFiles/dh_client.dir/all: library/CMakeFiles/mbedcrypto.dir/all
 programs/pkey/CMakeFiles/dh_client.dir/all: library/CMakeFiles/mbedx509.dir/all
 programs/pkey/CMakeFiles/dh_client.dir/all: library/CMakeFiles/mbedtls.dir/all
+programs/pkey/CMakeFiles/dh_client.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/dh_client.dir/build.make programs/pkey/CMakeFiles/dh_client.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/dh_client.dir/build.make programs/pkey/CMakeFiles/dh_client.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=5 "Built target dh_client"
@@ -1167,10 +1167,10 @@ programs/pkey/CMakeFiles/dh_client.dir/clean:
 # Target rules for target programs/pkey/CMakeFiles/dh_server.dir
 
 # All Build rule for target.
-programs/pkey/CMakeFiles/dh_server.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/pkey/CMakeFiles/dh_server.dir/all: library/CMakeFiles/mbedcrypto.dir/all
 programs/pkey/CMakeFiles/dh_server.dir/all: library/CMakeFiles/mbedx509.dir/all
 programs/pkey/CMakeFiles/dh_server.dir/all: library/CMakeFiles/mbedtls.dir/all
+programs/pkey/CMakeFiles/dh_server.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/dh_server.dir/build.make programs/pkey/CMakeFiles/dh_server.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/dh_server.dir/build.make programs/pkey/CMakeFiles/dh_server.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=6 "Built target dh_server"
@@ -1196,8 +1196,8 @@ programs/pkey/CMakeFiles/dh_server.dir/clean:
 # Target rules for target programs/pkey/CMakeFiles/dh_genprime.dir
 
 # All Build rule for target.
-programs/pkey/CMakeFiles/dh_genprime.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/pkey/CMakeFiles/dh_genprime.dir/all: library/CMakeFiles/mbedcrypto.dir/all
+programs/pkey/CMakeFiles/dh_genprime.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/dh_genprime.dir/build.make programs/pkey/CMakeFiles/dh_genprime.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/dh_genprime.dir/build.make programs/pkey/CMakeFiles/dh_genprime.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num= "Built target dh_genprime"
@@ -1223,8 +1223,8 @@ programs/pkey/CMakeFiles/dh_genprime.dir/clean:
 # Target rules for target programs/pkey/CMakeFiles/ecdh_curve25519.dir
 
 # All Build rule for target.
-programs/pkey/CMakeFiles/ecdh_curve25519.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/pkey/CMakeFiles/ecdh_curve25519.dir/all: library/CMakeFiles/mbedcrypto.dir/all
+programs/pkey/CMakeFiles/ecdh_curve25519.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/ecdh_curve25519.dir/build.make programs/pkey/CMakeFiles/ecdh_curve25519.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/ecdh_curve25519.dir/build.make programs/pkey/CMakeFiles/ecdh_curve25519.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=8 "Built target ecdh_curve25519"
@@ -1250,8 +1250,8 @@ programs/pkey/CMakeFiles/ecdh_curve25519.dir/clean:
 # Target rules for target programs/pkey/CMakeFiles/ecdsa.dir
 
 # All Build rule for target.
-programs/pkey/CMakeFiles/ecdsa.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/pkey/CMakeFiles/ecdsa.dir/all: library/CMakeFiles/mbedcrypto.dir/all
+programs/pkey/CMakeFiles/ecdsa.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/ecdsa.dir/build.make programs/pkey/CMakeFiles/ecdsa.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/ecdsa.dir/build.make programs/pkey/CMakeFiles/ecdsa.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num= "Built target ecdsa"
@@ -1277,8 +1277,8 @@ programs/pkey/CMakeFiles/ecdsa.dir/clean:
 # Target rules for target programs/pkey/CMakeFiles/gen_key.dir
 
 # All Build rule for target.
-programs/pkey/CMakeFiles/gen_key.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/pkey/CMakeFiles/gen_key.dir/all: library/CMakeFiles/mbedcrypto.dir/all
+programs/pkey/CMakeFiles/gen_key.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/gen_key.dir/build.make programs/pkey/CMakeFiles/gen_key.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/gen_key.dir/build.make programs/pkey/CMakeFiles/gen_key.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=18 "Built target gen_key"
@@ -1304,8 +1304,8 @@ programs/pkey/CMakeFiles/gen_key.dir/clean:
 # Target rules for target programs/pkey/CMakeFiles/key_app.dir
 
 # All Build rule for target.
-programs/pkey/CMakeFiles/key_app.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/pkey/CMakeFiles/key_app.dir/all: library/CMakeFiles/mbedcrypto.dir/all
+programs/pkey/CMakeFiles/key_app.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/key_app.dir/build.make programs/pkey/CMakeFiles/key_app.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/key_app.dir/build.make programs/pkey/CMakeFiles/key_app.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num= "Built target key_app"
@@ -1331,8 +1331,8 @@ programs/pkey/CMakeFiles/key_app.dir/clean:
 # Target rules for target programs/pkey/CMakeFiles/key_app_writer.dir
 
 # All Build rule for target.
-programs/pkey/CMakeFiles/key_app_writer.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/pkey/CMakeFiles/key_app_writer.dir/all: library/CMakeFiles/mbedcrypto.dir/all
+programs/pkey/CMakeFiles/key_app_writer.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/key_app_writer.dir/build.make programs/pkey/CMakeFiles/key_app_writer.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/key_app_writer.dir/build.make programs/pkey/CMakeFiles/key_app_writer.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=22 "Built target key_app_writer"
@@ -1358,8 +1358,8 @@ programs/pkey/CMakeFiles/key_app_writer.dir/clean:
 # Target rules for target programs/pkey/CMakeFiles/mpi_demo.dir
 
 # All Build rule for target.
-programs/pkey/CMakeFiles/mpi_demo.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/pkey/CMakeFiles/mpi_demo.dir/all: library/CMakeFiles/mbedcrypto.dir/all
+programs/pkey/CMakeFiles/mpi_demo.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/mpi_demo.dir/build.make programs/pkey/CMakeFiles/mpi_demo.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/mpi_demo.dir/build.make programs/pkey/CMakeFiles/mpi_demo.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=84 "Built target mpi_demo"
@@ -1385,8 +1385,8 @@ programs/pkey/CMakeFiles/mpi_demo.dir/clean:
 # Target rules for target programs/pkey/CMakeFiles/pk_encrypt.dir
 
 # All Build rule for target.
-programs/pkey/CMakeFiles/pk_encrypt.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/pkey/CMakeFiles/pk_encrypt.dir/all: library/CMakeFiles/mbedcrypto.dir/all
+programs/pkey/CMakeFiles/pk_encrypt.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/pk_encrypt.dir/build.make programs/pkey/CMakeFiles/pk_encrypt.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/pk_encrypt.dir/build.make programs/pkey/CMakeFiles/pk_encrypt.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num= "Built target pk_encrypt"
@@ -1412,8 +1412,8 @@ programs/pkey/CMakeFiles/pk_encrypt.dir/clean:
 # Target rules for target programs/pkey/CMakeFiles/pk_decrypt.dir
 
 # All Build rule for target.
-programs/pkey/CMakeFiles/pk_decrypt.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/pkey/CMakeFiles/pk_decrypt.dir/all: library/CMakeFiles/mbedcrypto.dir/all
+programs/pkey/CMakeFiles/pk_decrypt.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/pk_decrypt.dir/build.make programs/pkey/CMakeFiles/pk_decrypt.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/pk_decrypt.dir/build.make programs/pkey/CMakeFiles/pk_decrypt.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=85 "Built target pk_decrypt"
@@ -1439,8 +1439,8 @@ programs/pkey/CMakeFiles/pk_decrypt.dir/clean:
 # Target rules for target programs/pkey/CMakeFiles/pk_sign.dir
 
 # All Build rule for target.
-programs/pkey/CMakeFiles/pk_sign.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/pkey/CMakeFiles/pk_sign.dir/all: library/CMakeFiles/mbedcrypto.dir/all
+programs/pkey/CMakeFiles/pk_sign.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/pk_sign.dir/build.make programs/pkey/CMakeFiles/pk_sign.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/pk_sign.dir/build.make programs/pkey/CMakeFiles/pk_sign.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=86 "Built target pk_sign"
@@ -1466,8 +1466,8 @@ programs/pkey/CMakeFiles/pk_sign.dir/clean:
 # Target rules for target programs/pkey/CMakeFiles/pk_verify.dir
 
 # All Build rule for target.
-programs/pkey/CMakeFiles/pk_verify.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/pkey/CMakeFiles/pk_verify.dir/all: library/CMakeFiles/mbedcrypto.dir/all
+programs/pkey/CMakeFiles/pk_verify.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/pk_verify.dir/build.make programs/pkey/CMakeFiles/pk_verify.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/pk_verify.dir/build.make programs/pkey/CMakeFiles/pk_verify.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num= "Built target pk_verify"
@@ -1493,8 +1493,8 @@ programs/pkey/CMakeFiles/pk_verify.dir/clean:
 # Target rules for target programs/pkey/CMakeFiles/rsa_decrypt.dir
 
 # All Build rule for target.
-programs/pkey/CMakeFiles/rsa_decrypt.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/pkey/CMakeFiles/rsa_decrypt.dir/all: library/CMakeFiles/mbedcrypto.dir/all
+programs/pkey/CMakeFiles/rsa_decrypt.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/rsa_decrypt.dir/build.make programs/pkey/CMakeFiles/rsa_decrypt.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/rsa_decrypt.dir/build.make programs/pkey/CMakeFiles/rsa_decrypt.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num= "Built target rsa_decrypt"
@@ -1520,8 +1520,8 @@ programs/pkey/CMakeFiles/rsa_decrypt.dir/clean:
 # Target rules for target programs/pkey/CMakeFiles/rsa_encrypt.dir
 
 # All Build rule for target.
-programs/pkey/CMakeFiles/rsa_encrypt.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/pkey/CMakeFiles/rsa_encrypt.dir/all: library/CMakeFiles/mbedcrypto.dir/all
+programs/pkey/CMakeFiles/rsa_encrypt.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/rsa_encrypt.dir/build.make programs/pkey/CMakeFiles/rsa_encrypt.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/rsa_encrypt.dir/build.make programs/pkey/CMakeFiles/rsa_encrypt.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=90 "Built target rsa_encrypt"
@@ -1547,8 +1547,8 @@ programs/pkey/CMakeFiles/rsa_encrypt.dir/clean:
 # Target rules for target programs/pkey/CMakeFiles/rsa_genkey.dir
 
 # All Build rule for target.
-programs/pkey/CMakeFiles/rsa_genkey.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/pkey/CMakeFiles/rsa_genkey.dir/all: library/CMakeFiles/mbedcrypto.dir/all
+programs/pkey/CMakeFiles/rsa_genkey.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/rsa_genkey.dir/build.make programs/pkey/CMakeFiles/rsa_genkey.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/rsa_genkey.dir/build.make programs/pkey/CMakeFiles/rsa_genkey.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num= "Built target rsa_genkey"
@@ -1574,8 +1574,8 @@ programs/pkey/CMakeFiles/rsa_genkey.dir/clean:
 # Target rules for target programs/pkey/CMakeFiles/rsa_sign.dir
 
 # All Build rule for target.
-programs/pkey/CMakeFiles/rsa_sign.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/pkey/CMakeFiles/rsa_sign.dir/all: library/CMakeFiles/mbedcrypto.dir/all
+programs/pkey/CMakeFiles/rsa_sign.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/rsa_sign.dir/build.make programs/pkey/CMakeFiles/rsa_sign.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/rsa_sign.dir/build.make programs/pkey/CMakeFiles/rsa_sign.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=91 "Built target rsa_sign"
@@ -1601,8 +1601,8 @@ programs/pkey/CMakeFiles/rsa_sign.dir/clean:
 # Target rules for target programs/pkey/CMakeFiles/rsa_sign_pss.dir
 
 # All Build rule for target.
-programs/pkey/CMakeFiles/rsa_sign_pss.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/pkey/CMakeFiles/rsa_sign_pss.dir/all: library/CMakeFiles/mbedcrypto.dir/all
+programs/pkey/CMakeFiles/rsa_sign_pss.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/rsa_sign_pss.dir/build.make programs/pkey/CMakeFiles/rsa_sign_pss.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/rsa_sign_pss.dir/build.make programs/pkey/CMakeFiles/rsa_sign_pss.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num= "Built target rsa_sign_pss"
@@ -1628,8 +1628,8 @@ programs/pkey/CMakeFiles/rsa_sign_pss.dir/clean:
 # Target rules for target programs/pkey/CMakeFiles/rsa_verify.dir
 
 # All Build rule for target.
-programs/pkey/CMakeFiles/rsa_verify.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/pkey/CMakeFiles/rsa_verify.dir/all: library/CMakeFiles/mbedcrypto.dir/all
+programs/pkey/CMakeFiles/rsa_verify.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/rsa_verify.dir/build.make programs/pkey/CMakeFiles/rsa_verify.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/rsa_verify.dir/build.make programs/pkey/CMakeFiles/rsa_verify.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=92 "Built target rsa_verify"
@@ -1655,8 +1655,8 @@ programs/pkey/CMakeFiles/rsa_verify.dir/clean:
 # Target rules for target programs/pkey/CMakeFiles/rsa_verify_pss.dir
 
 # All Build rule for target.
-programs/pkey/CMakeFiles/rsa_verify_pss.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/pkey/CMakeFiles/rsa_verify_pss.dir/all: library/CMakeFiles/mbedcrypto.dir/all
+programs/pkey/CMakeFiles/rsa_verify_pss.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/rsa_verify_pss.dir/build.make programs/pkey/CMakeFiles/rsa_verify_pss.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/pkey/CMakeFiles/rsa_verify_pss.dir/build.make programs/pkey/CMakeFiles/rsa_verify_pss.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num= "Built target rsa_verify_pss"
@@ -1682,8 +1682,8 @@ programs/pkey/CMakeFiles/rsa_verify_pss.dir/clean:
 # Target rules for target programs/psa/CMakeFiles/aead_demo.dir
 
 # All Build rule for target.
-programs/psa/CMakeFiles/aead_demo.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/psa/CMakeFiles/aead_demo.dir/all: library/CMakeFiles/mbedcrypto.dir/all
+programs/psa/CMakeFiles/aead_demo.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/psa/CMakeFiles/aead_demo.dir/build.make programs/psa/CMakeFiles/aead_demo.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/psa/CMakeFiles/aead_demo.dir/build.make programs/psa/CMakeFiles/aead_demo.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num= "Built target aead_demo"
@@ -1709,8 +1709,8 @@ programs/psa/CMakeFiles/aead_demo.dir/clean:
 # Target rules for target programs/psa/CMakeFiles/crypto_examples.dir
 
 # All Build rule for target.
-programs/psa/CMakeFiles/crypto_examples.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/psa/CMakeFiles/crypto_examples.dir/all: library/CMakeFiles/mbedcrypto.dir/all
+programs/psa/CMakeFiles/crypto_examples.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/psa/CMakeFiles/crypto_examples.dir/build.make programs/psa/CMakeFiles/crypto_examples.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/psa/CMakeFiles/crypto_examples.dir/build.make programs/psa/CMakeFiles/crypto_examples.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num= "Built target crypto_examples"
@@ -1736,8 +1736,8 @@ programs/psa/CMakeFiles/crypto_examples.dir/clean:
 # Target rules for target programs/psa/CMakeFiles/hmac_demo.dir
 
 # All Build rule for target.
-programs/psa/CMakeFiles/hmac_demo.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/psa/CMakeFiles/hmac_demo.dir/all: library/CMakeFiles/mbedcrypto.dir/all
+programs/psa/CMakeFiles/hmac_demo.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/psa/CMakeFiles/hmac_demo.dir/build.make programs/psa/CMakeFiles/hmac_demo.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/psa/CMakeFiles/hmac_demo.dir/build.make programs/psa/CMakeFiles/hmac_demo.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=21 "Built target hmac_demo"
@@ -1763,8 +1763,8 @@ programs/psa/CMakeFiles/hmac_demo.dir/clean:
 # Target rules for target programs/psa/CMakeFiles/key_ladder_demo.dir
 
 # All Build rule for target.
-programs/psa/CMakeFiles/key_ladder_demo.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/psa/CMakeFiles/key_ladder_demo.dir/all: library/CMakeFiles/mbedcrypto.dir/all
+programs/psa/CMakeFiles/key_ladder_demo.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/psa/CMakeFiles/key_ladder_demo.dir/build.make programs/psa/CMakeFiles/key_ladder_demo.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/psa/CMakeFiles/key_ladder_demo.dir/build.make programs/psa/CMakeFiles/key_ladder_demo.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num= "Built target key_ladder_demo"
@@ -1790,9 +1790,9 @@ programs/psa/CMakeFiles/key_ladder_demo.dir/clean:
 # Target rules for target programs/psa/CMakeFiles/psa_constant_names.dir
 
 # All Build rule for target.
-programs/psa/CMakeFiles/psa_constant_names.dir/all: CMakeFiles/mbedtls_test.dir/all
-programs/psa/CMakeFiles/psa_constant_names.dir/all: library/CMakeFiles/mbedcrypto.dir/all
 programs/psa/CMakeFiles/psa_constant_names.dir/all: programs/psa/CMakeFiles/generate_psa_constant_names_generated_c.dir/all
+programs/psa/CMakeFiles/psa_constant_names.dir/all: library/CMakeFiles/mbedcrypto.dir/all
+programs/psa/CMakeFiles/psa_constant_names.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/psa/CMakeFiles/psa_constant_names.dir/build.make programs/psa/CMakeFiles/psa_constant_names.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/psa/CMakeFiles/psa_constant_names.dir/build.make programs/psa/CMakeFiles/psa_constant_names.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=87 "Built target psa_constant_names"
@@ -1844,8 +1844,8 @@ programs/psa/CMakeFiles/generate_psa_constant_names_generated_c.dir/clean:
 # Target rules for target programs/random/CMakeFiles/gen_entropy.dir
 
 # All Build rule for target.
-programs/random/CMakeFiles/gen_entropy.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/random/CMakeFiles/gen_entropy.dir/all: library/CMakeFiles/mbedcrypto.dir/all
+programs/random/CMakeFiles/gen_entropy.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/random/CMakeFiles/gen_entropy.dir/build.make programs/random/CMakeFiles/gen_entropy.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/random/CMakeFiles/gen_entropy.dir/build.make programs/random/CMakeFiles/gen_entropy.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num= "Built target gen_entropy"
@@ -1871,8 +1871,8 @@ programs/random/CMakeFiles/gen_entropy.dir/clean:
 # Target rules for target programs/random/CMakeFiles/gen_random_ctr_drbg.dir
 
 # All Build rule for target.
-programs/random/CMakeFiles/gen_random_ctr_drbg.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/random/CMakeFiles/gen_random_ctr_drbg.dir/all: library/CMakeFiles/mbedcrypto.dir/all
+programs/random/CMakeFiles/gen_random_ctr_drbg.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/random/CMakeFiles/gen_random_ctr_drbg.dir/build.make programs/random/CMakeFiles/gen_random_ctr_drbg.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/random/CMakeFiles/gen_random_ctr_drbg.dir/build.make programs/random/CMakeFiles/gen_random_ctr_drbg.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num= "Built target gen_random_ctr_drbg"
@@ -1898,10 +1898,10 @@ programs/random/CMakeFiles/gen_random_ctr_drbg.dir/clean:
 # Target rules for target programs/ssl/CMakeFiles/dtls_client.dir
 
 # All Build rule for target.
-programs/ssl/CMakeFiles/dtls_client.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/ssl/CMakeFiles/dtls_client.dir/all: library/CMakeFiles/mbedcrypto.dir/all
 programs/ssl/CMakeFiles/dtls_client.dir/all: library/CMakeFiles/mbedx509.dir/all
 programs/ssl/CMakeFiles/dtls_client.dir/all: library/CMakeFiles/mbedtls.dir/all
+programs/ssl/CMakeFiles/dtls_client.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/ssl/CMakeFiles/dtls_client.dir/build.make programs/ssl/CMakeFiles/dtls_client.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/ssl/CMakeFiles/dtls_client.dir/build.make programs/ssl/CMakeFiles/dtls_client.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=7 "Built target dtls_client"
@@ -1927,10 +1927,10 @@ programs/ssl/CMakeFiles/dtls_client.dir/clean:
 # Target rules for target programs/ssl/CMakeFiles/dtls_server.dir
 
 # All Build rule for target.
-programs/ssl/CMakeFiles/dtls_server.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/ssl/CMakeFiles/dtls_server.dir/all: library/CMakeFiles/mbedcrypto.dir/all
 programs/ssl/CMakeFiles/dtls_server.dir/all: library/CMakeFiles/mbedx509.dir/all
 programs/ssl/CMakeFiles/dtls_server.dir/all: library/CMakeFiles/mbedtls.dir/all
+programs/ssl/CMakeFiles/dtls_server.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/ssl/CMakeFiles/dtls_server.dir/build.make programs/ssl/CMakeFiles/dtls_server.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/ssl/CMakeFiles/dtls_server.dir/build.make programs/ssl/CMakeFiles/dtls_server.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num= "Built target dtls_server"
@@ -1956,10 +1956,10 @@ programs/ssl/CMakeFiles/dtls_server.dir/clean:
 # Target rules for target programs/ssl/CMakeFiles/mini_client.dir
 
 # All Build rule for target.
-programs/ssl/CMakeFiles/mini_client.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/ssl/CMakeFiles/mini_client.dir/all: library/CMakeFiles/mbedcrypto.dir/all
 programs/ssl/CMakeFiles/mini_client.dir/all: library/CMakeFiles/mbedx509.dir/all
 programs/ssl/CMakeFiles/mini_client.dir/all: library/CMakeFiles/mbedtls.dir/all
+programs/ssl/CMakeFiles/mini_client.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/ssl/CMakeFiles/mini_client.dir/build.make programs/ssl/CMakeFiles/mini_client.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/ssl/CMakeFiles/mini_client.dir/build.make programs/ssl/CMakeFiles/mini_client.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num= "Built target mini_client"
@@ -1985,10 +1985,10 @@ programs/ssl/CMakeFiles/mini_client.dir/clean:
 # Target rules for target programs/ssl/CMakeFiles/ssl_client1.dir
 
 # All Build rule for target.
-programs/ssl/CMakeFiles/ssl_client1.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/ssl/CMakeFiles/ssl_client1.dir/all: library/CMakeFiles/mbedcrypto.dir/all
 programs/ssl/CMakeFiles/ssl_client1.dir/all: library/CMakeFiles/mbedx509.dir/all
 programs/ssl/CMakeFiles/ssl_client1.dir/all: library/CMakeFiles/mbedtls.dir/all
+programs/ssl/CMakeFiles/ssl_client1.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/ssl/CMakeFiles/ssl_client1.dir/build.make programs/ssl/CMakeFiles/ssl_client1.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/ssl/CMakeFiles/ssl_client1.dir/build.make programs/ssl/CMakeFiles/ssl_client1.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num= "Built target ssl_client1"
@@ -2014,11 +2014,11 @@ programs/ssl/CMakeFiles/ssl_client1.dir/clean:
 # Target rules for target programs/ssl/CMakeFiles/ssl_client2.dir
 
 # All Build rule for target.
-programs/ssl/CMakeFiles/ssl_client2.dir/all: CMakeFiles/mbedtls_test.dir/all
+programs/ssl/CMakeFiles/ssl_client2.dir/all: programs/test/CMakeFiles/generate_query_config_c.dir/all
 programs/ssl/CMakeFiles/ssl_client2.dir/all: library/CMakeFiles/mbedcrypto.dir/all
 programs/ssl/CMakeFiles/ssl_client2.dir/all: library/CMakeFiles/mbedx509.dir/all
 programs/ssl/CMakeFiles/ssl_client2.dir/all: library/CMakeFiles/mbedtls.dir/all
-programs/ssl/CMakeFiles/ssl_client2.dir/all: programs/test/CMakeFiles/generate_query_config_c.dir/all
+programs/ssl/CMakeFiles/ssl_client2.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/ssl/CMakeFiles/ssl_client2.dir/build.make programs/ssl/CMakeFiles/ssl_client2.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/ssl/CMakeFiles/ssl_client2.dir/build.make programs/ssl/CMakeFiles/ssl_client2.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=94 "Built target ssl_client2"
@@ -2044,10 +2044,10 @@ programs/ssl/CMakeFiles/ssl_client2.dir/clean:
 # Target rules for target programs/ssl/CMakeFiles/ssl_context_info.dir
 
 # All Build rule for target.
-programs/ssl/CMakeFiles/ssl_context_info.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/ssl/CMakeFiles/ssl_context_info.dir/all: library/CMakeFiles/mbedcrypto.dir/all
 programs/ssl/CMakeFiles/ssl_context_info.dir/all: library/CMakeFiles/mbedx509.dir/all
 programs/ssl/CMakeFiles/ssl_context_info.dir/all: library/CMakeFiles/mbedtls.dir/all
+programs/ssl/CMakeFiles/ssl_context_info.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/ssl/CMakeFiles/ssl_context_info.dir/build.make programs/ssl/CMakeFiles/ssl_context_info.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/ssl/CMakeFiles/ssl_context_info.dir/build.make programs/ssl/CMakeFiles/ssl_context_info.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=95 "Built target ssl_context_info"
@@ -2073,10 +2073,10 @@ programs/ssl/CMakeFiles/ssl_context_info.dir/clean:
 # Target rules for target programs/ssl/CMakeFiles/ssl_fork_server.dir
 
 # All Build rule for target.
-programs/ssl/CMakeFiles/ssl_fork_server.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/ssl/CMakeFiles/ssl_fork_server.dir/all: library/CMakeFiles/mbedcrypto.dir/all
 programs/ssl/CMakeFiles/ssl_fork_server.dir/all: library/CMakeFiles/mbedx509.dir/all
 programs/ssl/CMakeFiles/ssl_fork_server.dir/all: library/CMakeFiles/mbedtls.dir/all
+programs/ssl/CMakeFiles/ssl_fork_server.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/ssl/CMakeFiles/ssl_fork_server.dir/build.make programs/ssl/CMakeFiles/ssl_fork_server.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/ssl/CMakeFiles/ssl_fork_server.dir/build.make programs/ssl/CMakeFiles/ssl_fork_server.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num= "Built target ssl_fork_server"
@@ -2102,10 +2102,10 @@ programs/ssl/CMakeFiles/ssl_fork_server.dir/clean:
 # Target rules for target programs/ssl/CMakeFiles/ssl_mail_client.dir
 
 # All Build rule for target.
-programs/ssl/CMakeFiles/ssl_mail_client.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/ssl/CMakeFiles/ssl_mail_client.dir/all: library/CMakeFiles/mbedcrypto.dir/all
 programs/ssl/CMakeFiles/ssl_mail_client.dir/all: library/CMakeFiles/mbedx509.dir/all
 programs/ssl/CMakeFiles/ssl_mail_client.dir/all: library/CMakeFiles/mbedtls.dir/all
+programs/ssl/CMakeFiles/ssl_mail_client.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/ssl/CMakeFiles/ssl_mail_client.dir/build.make programs/ssl/CMakeFiles/ssl_mail_client.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/ssl/CMakeFiles/ssl_mail_client.dir/build.make programs/ssl/CMakeFiles/ssl_mail_client.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=96 "Built target ssl_mail_client"
@@ -2131,10 +2131,10 @@ programs/ssl/CMakeFiles/ssl_mail_client.dir/clean:
 # Target rules for target programs/ssl/CMakeFiles/ssl_server.dir
 
 # All Build rule for target.
-programs/ssl/CMakeFiles/ssl_server.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/ssl/CMakeFiles/ssl_server.dir/all: library/CMakeFiles/mbedcrypto.dir/all
 programs/ssl/CMakeFiles/ssl_server.dir/all: library/CMakeFiles/mbedx509.dir/all
 programs/ssl/CMakeFiles/ssl_server.dir/all: library/CMakeFiles/mbedtls.dir/all
+programs/ssl/CMakeFiles/ssl_server.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/ssl/CMakeFiles/ssl_server.dir/build.make programs/ssl/CMakeFiles/ssl_server.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/ssl/CMakeFiles/ssl_server.dir/build.make programs/ssl/CMakeFiles/ssl_server.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=97 "Built target ssl_server"
@@ -2160,11 +2160,11 @@ programs/ssl/CMakeFiles/ssl_server.dir/clean:
 # Target rules for target programs/ssl/CMakeFiles/ssl_server2.dir
 
 # All Build rule for target.
-programs/ssl/CMakeFiles/ssl_server2.dir/all: CMakeFiles/mbedtls_test.dir/all
+programs/ssl/CMakeFiles/ssl_server2.dir/all: programs/test/CMakeFiles/generate_query_config_c.dir/all
 programs/ssl/CMakeFiles/ssl_server2.dir/all: library/CMakeFiles/mbedcrypto.dir/all
 programs/ssl/CMakeFiles/ssl_server2.dir/all: library/CMakeFiles/mbedx509.dir/all
 programs/ssl/CMakeFiles/ssl_server2.dir/all: library/CMakeFiles/mbedtls.dir/all
-programs/ssl/CMakeFiles/ssl_server2.dir/all: programs/test/CMakeFiles/generate_query_config_c.dir/all
+programs/ssl/CMakeFiles/ssl_server2.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/ssl/CMakeFiles/ssl_server2.dir/build.make programs/ssl/CMakeFiles/ssl_server2.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/ssl/CMakeFiles/ssl_server2.dir/build.make programs/ssl/CMakeFiles/ssl_server2.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=98 "Built target ssl_server2"
@@ -2190,10 +2190,10 @@ programs/ssl/CMakeFiles/ssl_server2.dir/clean:
 # Target rules for target programs/ssl/CMakeFiles/ssl_pthread_server.dir
 
 # All Build rule for target.
-programs/ssl/CMakeFiles/ssl_pthread_server.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/ssl/CMakeFiles/ssl_pthread_server.dir/all: library/CMakeFiles/mbedcrypto.dir/all
 programs/ssl/CMakeFiles/ssl_pthread_server.dir/all: library/CMakeFiles/mbedx509.dir/all
 programs/ssl/CMakeFiles/ssl_pthread_server.dir/all: library/CMakeFiles/mbedtls.dir/all
+programs/ssl/CMakeFiles/ssl_pthread_server.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/ssl/CMakeFiles/ssl_pthread_server.dir/build.make programs/ssl/CMakeFiles/ssl_pthread_server.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/ssl/CMakeFiles/ssl_pthread_server.dir/build.make programs/ssl/CMakeFiles/ssl_pthread_server.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num= "Built target ssl_pthread_server"
@@ -2271,10 +2271,10 @@ programs/test/CMakeFiles/generate_query_config_c.dir/clean:
 # Target rules for target programs/test/CMakeFiles/query_included_headers.dir
 
 # All Build rule for target.
-programs/test/CMakeFiles/query_included_headers.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/test/CMakeFiles/query_included_headers.dir/all: library/CMakeFiles/mbedcrypto.dir/all
 programs/test/CMakeFiles/query_included_headers.dir/all: library/CMakeFiles/mbedx509.dir/all
 programs/test/CMakeFiles/query_included_headers.dir/all: library/CMakeFiles/mbedtls.dir/all
+programs/test/CMakeFiles/query_included_headers.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/test/CMakeFiles/query_included_headers.dir/build.make programs/test/CMakeFiles/query_included_headers.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/test/CMakeFiles/query_included_headers.dir/build.make programs/test/CMakeFiles/query_included_headers.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num= "Built target query_included_headers"
@@ -2300,10 +2300,10 @@ programs/test/CMakeFiles/query_included_headers.dir/clean:
 # Target rules for target programs/test/CMakeFiles/selftest.dir
 
 # All Build rule for target.
-programs/test/CMakeFiles/selftest.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/test/CMakeFiles/selftest.dir/all: library/CMakeFiles/mbedcrypto.dir/all
 programs/test/CMakeFiles/selftest.dir/all: library/CMakeFiles/mbedx509.dir/all
 programs/test/CMakeFiles/selftest.dir/all: library/CMakeFiles/mbedtls.dir/all
+programs/test/CMakeFiles/selftest.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/test/CMakeFiles/selftest.dir/build.make programs/test/CMakeFiles/selftest.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/test/CMakeFiles/selftest.dir/build.make programs/test/CMakeFiles/selftest.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=93 "Built target selftest"
@@ -2329,10 +2329,10 @@ programs/test/CMakeFiles/selftest.dir/clean:
 # Target rules for target programs/test/CMakeFiles/udp_proxy.dir
 
 # All Build rule for target.
-programs/test/CMakeFiles/udp_proxy.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/test/CMakeFiles/udp_proxy.dir/all: library/CMakeFiles/mbedcrypto.dir/all
 programs/test/CMakeFiles/udp_proxy.dir/all: library/CMakeFiles/mbedx509.dir/all
 programs/test/CMakeFiles/udp_proxy.dir/all: library/CMakeFiles/mbedtls.dir/all
+programs/test/CMakeFiles/udp_proxy.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/test/CMakeFiles/udp_proxy.dir/build.make programs/test/CMakeFiles/udp_proxy.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/test/CMakeFiles/udp_proxy.dir/build.make programs/test/CMakeFiles/udp_proxy.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=99 "Built target udp_proxy"
@@ -2358,8 +2358,8 @@ programs/test/CMakeFiles/udp_proxy.dir/clean:
 # Target rules for target programs/test/CMakeFiles/benchmark.dir
 
 # All Build rule for target.
-programs/test/CMakeFiles/benchmark.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/test/CMakeFiles/benchmark.dir/all: library/CMakeFiles/mbedcrypto.dir/all
+programs/test/CMakeFiles/benchmark.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/test/CMakeFiles/benchmark.dir/build.make programs/test/CMakeFiles/benchmark.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/test/CMakeFiles/benchmark.dir/build.make programs/test/CMakeFiles/benchmark.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=1 "Built target benchmark"
@@ -2385,8 +2385,8 @@ programs/test/CMakeFiles/benchmark.dir/clean:
 # Target rules for target programs/test/CMakeFiles/query_compile_time_config.dir
 
 # All Build rule for target.
-programs/test/CMakeFiles/query_compile_time_config.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/test/CMakeFiles/query_compile_time_config.dir/all: library/CMakeFiles/mbedcrypto.dir/all
+programs/test/CMakeFiles/query_compile_time_config.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/test/CMakeFiles/query_compile_time_config.dir/build.make programs/test/CMakeFiles/query_compile_time_config.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/test/CMakeFiles/query_compile_time_config.dir/build.make programs/test/CMakeFiles/query_compile_time_config.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=88 "Built target query_compile_time_config"
@@ -2412,8 +2412,8 @@ programs/test/CMakeFiles/query_compile_time_config.dir/clean:
 # Target rules for target programs/test/CMakeFiles/zeroize.dir
 
 # All Build rule for target.
-programs/test/CMakeFiles/zeroize.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/test/CMakeFiles/zeroize.dir/all: library/CMakeFiles/mbedcrypto.dir/all
+programs/test/CMakeFiles/zeroize.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/test/CMakeFiles/zeroize.dir/build.make programs/test/CMakeFiles/zeroize.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/test/CMakeFiles/zeroize.dir/build.make programs/test/CMakeFiles/zeroize.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=100 "Built target zeroize"
@@ -2439,8 +2439,8 @@ programs/test/CMakeFiles/zeroize.dir/clean:
 # Target rules for target programs/util/CMakeFiles/pem2der.dir
 
 # All Build rule for target.
-programs/util/CMakeFiles/pem2der.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/util/CMakeFiles/pem2der.dir/all: library/CMakeFiles/mbedcrypto.dir/all
+programs/util/CMakeFiles/pem2der.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/util/CMakeFiles/pem2der.dir/build.make programs/util/CMakeFiles/pem2der.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/util/CMakeFiles/pem2der.dir/build.make programs/util/CMakeFiles/pem2der.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num= "Built target pem2der"
@@ -2466,8 +2466,8 @@ programs/util/CMakeFiles/pem2der.dir/clean:
 # Target rules for target programs/util/CMakeFiles/strerror.dir
 
 # All Build rule for target.
-programs/util/CMakeFiles/strerror.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/util/CMakeFiles/strerror.dir/all: library/CMakeFiles/mbedcrypto.dir/all
+programs/util/CMakeFiles/strerror.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/util/CMakeFiles/strerror.dir/build.make programs/util/CMakeFiles/strerror.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/util/CMakeFiles/strerror.dir/build.make programs/util/CMakeFiles/strerror.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num= "Built target strerror"
@@ -2493,10 +2493,10 @@ programs/util/CMakeFiles/strerror.dir/clean:
 # Target rules for target programs/x509/CMakeFiles/cert_app.dir
 
 # All Build rule for target.
-programs/x509/CMakeFiles/cert_app.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/x509/CMakeFiles/cert_app.dir/all: library/CMakeFiles/mbedcrypto.dir/all
 programs/x509/CMakeFiles/cert_app.dir/all: library/CMakeFiles/mbedx509.dir/all
 programs/x509/CMakeFiles/cert_app.dir/all: library/CMakeFiles/mbedtls.dir/all
+programs/x509/CMakeFiles/cert_app.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/x509/CMakeFiles/cert_app.dir/build.make programs/x509/CMakeFiles/cert_app.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/x509/CMakeFiles/cert_app.dir/build.make programs/x509/CMakeFiles/cert_app.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num= "Built target cert_app"
@@ -2522,9 +2522,9 @@ programs/x509/CMakeFiles/cert_app.dir/clean:
 # Target rules for target programs/x509/CMakeFiles/cert_req.dir
 
 # All Build rule for target.
-programs/x509/CMakeFiles/cert_req.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/x509/CMakeFiles/cert_req.dir/all: library/CMakeFiles/mbedcrypto.dir/all
 programs/x509/CMakeFiles/cert_req.dir/all: library/CMakeFiles/mbedx509.dir/all
+programs/x509/CMakeFiles/cert_req.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/x509/CMakeFiles/cert_req.dir/build.make programs/x509/CMakeFiles/cert_req.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/x509/CMakeFiles/cert_req.dir/build.make programs/x509/CMakeFiles/cert_req.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=2 "Built target cert_req"
@@ -2550,9 +2550,9 @@ programs/x509/CMakeFiles/cert_req.dir/clean:
 # Target rules for target programs/x509/CMakeFiles/cert_write.dir
 
 # All Build rule for target.
-programs/x509/CMakeFiles/cert_write.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/x509/CMakeFiles/cert_write.dir/all: library/CMakeFiles/mbedcrypto.dir/all
 programs/x509/CMakeFiles/cert_write.dir/all: library/CMakeFiles/mbedx509.dir/all
+programs/x509/CMakeFiles/cert_write.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/x509/CMakeFiles/cert_write.dir/build.make programs/x509/CMakeFiles/cert_write.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/x509/CMakeFiles/cert_write.dir/build.make programs/x509/CMakeFiles/cert_write.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num= "Built target cert_write"
@@ -2578,9 +2578,9 @@ programs/x509/CMakeFiles/cert_write.dir/clean:
 # Target rules for target programs/x509/CMakeFiles/crl_app.dir
 
 # All Build rule for target.
-programs/x509/CMakeFiles/crl_app.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/x509/CMakeFiles/crl_app.dir/all: library/CMakeFiles/mbedcrypto.dir/all
 programs/x509/CMakeFiles/crl_app.dir/all: library/CMakeFiles/mbedx509.dir/all
+programs/x509/CMakeFiles/crl_app.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/x509/CMakeFiles/crl_app.dir/build.make programs/x509/CMakeFiles/crl_app.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/x509/CMakeFiles/crl_app.dir/build.make programs/x509/CMakeFiles/crl_app.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num= "Built target crl_app"
@@ -2606,9 +2606,9 @@ programs/x509/CMakeFiles/crl_app.dir/clean:
 # Target rules for target programs/x509/CMakeFiles/load_roots.dir
 
 # All Build rule for target.
-programs/x509/CMakeFiles/load_roots.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/x509/CMakeFiles/load_roots.dir/all: library/CMakeFiles/mbedcrypto.dir/all
 programs/x509/CMakeFiles/load_roots.dir/all: library/CMakeFiles/mbedx509.dir/all
+programs/x509/CMakeFiles/load_roots.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/x509/CMakeFiles/load_roots.dir/build.make programs/x509/CMakeFiles/load_roots.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/x509/CMakeFiles/load_roots.dir/build.make programs/x509/CMakeFiles/load_roots.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=23 "Built target load_roots"
@@ -2634,9 +2634,9 @@ programs/x509/CMakeFiles/load_roots.dir/clean:
 # Target rules for target programs/x509/CMakeFiles/req_app.dir
 
 # All Build rule for target.
-programs/x509/CMakeFiles/req_app.dir/all: CMakeFiles/mbedtls_test.dir/all
 programs/x509/CMakeFiles/req_app.dir/all: library/CMakeFiles/mbedcrypto.dir/all
 programs/x509/CMakeFiles/req_app.dir/all: library/CMakeFiles/mbedx509.dir/all
+programs/x509/CMakeFiles/req_app.dir/all: CMakeFiles/mbedtls_test.dir/all
 	$(MAKE) $(MAKESILENT) -f programs/x509/CMakeFiles/req_app.dir/build.make programs/x509/CMakeFiles/req_app.dir/depend
 	$(MAKE) $(MAKESILENT) -f programs/x509/CMakeFiles/req_app.dir/build.make programs/x509/CMakeFiles/req_app.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/zurvantsev/AndroidStudioProjects/project1/libs/mbedtls/build/x86/CMakeFiles --progress-num=89 "Built target req_app"
