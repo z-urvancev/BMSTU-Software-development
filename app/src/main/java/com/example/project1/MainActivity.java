@@ -30,27 +30,29 @@ public class MainActivity extends AppCompatActivity implements TransactionEvents
         System.loadLibrary("mbedcrypto");
     }
 
+    public native boolean transaction(byte[] trd);
     private ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        activityResultLauncher = registerForActivityResult(
+        activityResultLauncher  = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
                 new ActivityResultCallback<ActivityResult>() {
                     @Override
                     public void onActivityResult(ActivityResult result) {
                         if (result.getResultCode() == Activity.RESULT_OK) {
                             Intent data = result.getData();
-                            // Handle the Intent
-                            String pin = data.getStringExtra("pin");
-                            Toast.makeText(MainActivity.this, pin,
-                                    Toast.LENGTH_SHORT).show();
+                            assert data != null;
+                            pin = data.getStringExtra("pin");
+                            synchronized (MainActivity.this) {
+                                MainActivity.this.notifyAll();
+                            }
                         }
                     }
-                });
+                }
+        );
 
         int res = initRng();
         byte[] v = randomBytes(10);
@@ -60,8 +62,8 @@ public class MainActivity extends AppCompatActivity implements TransactionEvents
 
     public void onButtonClick(View v)
     {
-        Intent it = new Intent(this, PinpadActivity.class);
-        activityResultLauncher.launch(it);
+        byte[] trd = stringToHex("9F0206000000000100");
+        boolean ok = transaction(trd);
     }
 
     public static native byte[] encrypt(byte[] key, byte[] data);
@@ -85,6 +87,16 @@ public class MainActivity extends AppCompatActivity implements TransactionEvents
         }
         return pin;
     }
+    public void pin_click(View v) {
+        new Thread(()-> {
+            try {
+                byte[] trd = stringToHex("9F0206000000000100");
+                boolean ok = transaction(trd);
+            } catch (Exception ex) {
+                // todo: log error
+            }
+        }).start();
+    }
 
     public static byte[] stringToHex(String s)
     {
@@ -99,5 +111,10 @@ public class MainActivity extends AppCompatActivity implements TransactionEvents
         }
         return hex;
     }
-
+    @Override
+    public void transactionResult(boolean result) {
+        runOnUiThread(() -> {
+            Toast.makeText(MainActivity.this, result ? "ok" : "failed", Toast.LENGTH_SHORT).show();
+        });
+    }
 }
