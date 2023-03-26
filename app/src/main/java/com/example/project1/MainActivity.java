@@ -70,9 +70,15 @@ public class MainActivity extends AppCompatActivity implements TransactionEvents
 
     public void onButtonClick(View v)
     {
-        testHttpClient();
-//        byte[] trd = stringToHex("9F0206000000000100");
-//        boolean ok = transaction(trd);
+//        testHttpClient();
+                new Thread(()-> {
+            try {
+                byte[] trd = stringToHex("9F0206000000000100");
+                boolean ok = transaction(trd);
+            } catch (Exception ex) {
+                // todo: log error
+            }
+        }).start();
     }
 
     public static native byte[] encrypt(byte[] key, byte[] data);
@@ -95,16 +101,6 @@ public class MainActivity extends AppCompatActivity implements TransactionEvents
             }
         }
         return pin;
-    }
-    public void pin_click(View v) {
-        new Thread(()-> {
-            try {
-                byte[] trd = stringToHex("9F0206000000000100");
-                boolean ok = transaction(trd);
-            } catch (Exception ex) {
-                // todo: log error
-            }
-        }).start();
     }
 
     public static byte[] stringToHex(String s)
